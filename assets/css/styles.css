@@ -828,8 +828,9 @@ img {
 }
 
 .contact__label{
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   color: var(--title-color);
+  font-weight: var(--font-medium);
 }
 
 .contact__input{
@@ -1145,6 +1146,12 @@ img {
   .footer__copy{
     margin-top: 4.5rem;
   }
+  .footer__titles{
+    margin-top: -.2rem;
+  }
+  .footer__title{
+    font-size: var(--h3-font-size);
+  }
 }
 
 /* For large devices */
@@ -1193,12 +1200,11 @@ img {
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .contact__information-general{
-    margin-left: -3rem;
-  } */
 
   .footer__titles{
-    margin-top: -1rem;
+    margin-top: -.2rem;
   }
-
+  .footer__title{
+    font-size: var(--h3-font-size);
+  }
 }
