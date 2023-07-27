@@ -828,8 +828,9 @@ img {
 }
 
 .contact__label{
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   color: var(--title-color);
+  font-weight: var(--font-medium);
 }
 
 .contact__input{
@@ -837,7 +838,7 @@ img {
   background-color: var(--input-color);
   color: var(--text-color);
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   border: none;
   outline: none;
   padding: .25rem .5rem .5rem 0;
@@ -1145,6 +1146,12 @@ img {
   .footer__copy{
     margin-top: 4.5rem;
   }
+  .footer__titles{
+    margin-top: -.2rem;
+  }
+  .footer__title{
+    font-size: var(--h3-font-size);
+  }
 }
 
 /* For large devices */
@@ -1195,7 +1202,9 @@ img {
   }
 
   .footer__titles{
-    margin-top: -1rem;
+    margin-top: -.2rem;
   }
-
+  .footer__title{
+    font-size: var(--h3-font-size);
+  }
 }
