@@ -31,6 +31,7 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
+  --h4-font-size: 1rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
@@ -541,30 +542,6 @@ img {
   width: 80%;
 }
 
-.skills__node {
-  width: 85%;
-}
-
-.skills__firebase {
-  width: 90%;
-}
-
-.skills__python {
-  width: 55%;
-}
-
-.skills__figma {
-  width: 90%;
-}
-
-.skills__sketch {
-  width: 85%;
-}
-
-.skills__photoshop {
-  width: 80%;
-}
-
 .skills__close .skills__list {
   height: 0;
   overflow: hidden;
@@ -690,17 +667,17 @@ img {
 } */
 
 .services__icon-fpt {
-  height: 5rem;
+  height: 3rem;
   aspect-ratio: 2.46/1;
 }
 
 .services__icon-citek {
-  height: 5rem;
+  height: 3rem;
   aspect-ratio: 2/1;
 }
 
 .services__icon-sfg {
-  height: 5rem;
+  height: 3rem;
   aspect-ratio: 3.25/1;
 }
 
