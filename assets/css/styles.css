@@ -173,6 +173,23 @@ img {
   gap: 1.5rem;
 }
 
+.skills__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__row {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử xuống hàng */
+  justify-content: space-between; /* Căn đều các phần tử */
+  gap: 1.5rem; /* Khoảng cách giữa các phần tử */
+}
+
+.skills__content {
+  flex: 1 1 45%; /* Cho phép phần tử co giãn và chiếm khoảng 45% chiều rộng */
+  min-width: 300px; /* Đảm bảo mỗi phần tử có chiều rộng tối thiểu */
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -438,9 +455,9 @@ img {
 }
 
 /*==================== SKILLS ====================*/
-.skills__container {
+/* .skills__container {
   row-gap: 0;
-}
+} */
 
 .skills__header {
   display: flex;
@@ -504,23 +521,23 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__html {
+.skills__100 {
+  width: 100%;
+}
+
+.skills__95 {
+  width: 95%;
+}
+
+.skills__90 {
   width: 90%;
 }
 
-.skills__css {
-  width: 80%;
-}
-
-.skills__js {
-  width: 60%;
-}
-
-.skills__react {
+.skills__85 {
   width: 85%;
 }
 
-.skills__php {
+.skills__80 {
   width: 80%;
 }
 
@@ -643,10 +660,48 @@ img {
 .services__content {
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  padding: 1.25rem 1rem 1.25rem 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
+}
+
+.services_image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.services_text-container {
+  display: flex;
+  justify-content: left;
+}
+
+/* .services__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: var(--container-color);
+  padding: 1.25rem 0.5rem 1.25rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+} */
+
+.services__icon-fpt {
+  height: 5rem;
+  aspect-ratio: 2.46/1;
+}
+
+.services__icon-citek {
+  height: 5rem;
+  aspect-ratio: 2/1;
+}
+
+.services__icon-sfg {
+  height: 5rem;
+  aspect-ratio: 3.25/1;
 }
 
 .services__content:hover {
@@ -1021,8 +1076,24 @@ img {
     justify-content: center;
   }
   .services__content {
-    padding-right: 3.5rem;
+    padding-right: 1.5rem;
   }
+
+  .services__icon-fpt {
+    height: 3rem;
+    aspect-ratio: 2.46/1;
+  }
+
+  .services__icon-citek {
+    height: 3rem;
+    aspect-ratio: 2/1;
+  }
+
+  .services__icon-sfg {
+    height: 3rem;
+    aspect-ratio: 3.25/1;
+  }
+
   .services__modal {
     padding: 0 0.5rem;
   }
@@ -1042,11 +1113,35 @@ img {
   }
 
   .about__container,
-  .skills__container,
+  /* .skills__container, */
   .portfolio__content,
   .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__container {
+    display: grid; /* Sử dụng Grid để tạo bố cục 2 cột */
+    grid-template-columns: repeat(2, 1fr); /* 2 cột có chiều rộng bằng nhau */
+    gap: 1.5rem;
+  }
+
+  .skills__container .skills__content:first-child {
+    /* Đảm bảo Skill 1 chiếm vị trí đầu tiên */
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .skills__container .skills__content:nth-child(2) {
+    /* Đặt Skill 2 vào cột thứ hai, hàng đầu tiên */
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .skills__container .skills__content:nth-child(3) {
+    /* Đặt Skill 3 vào cột đầu tiên, hàng thứ hai */
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .qualification__sections {
@@ -1159,10 +1254,25 @@ img {
     font-size: 2rem;
   }
   .services__content {
-    padding: 6rem 0 2rem 2.5rem;
+    padding: 3rem 1.5rem 2rem 1.5rem;
   }
   .services__modal-content {
     width: 450px;
+  }
+
+  .services__icon-fpt {
+    height: 5rem;
+    aspect-ratio: 2.46/1;
+  }
+
+  .services__icon-citek {
+    height: 5rem;
+    aspect-ratio: 2/1;
+  }
+
+  .services__icon-sfg {
+    height: 5rem;
+    aspect-ratio: 3.25/1;
   }
 
   .portfolio__img {
@@ -1212,6 +1322,10 @@ img {
 
   .services__container {
     grid-template-columns: repeat(3, 238px);
+  }
+
+  .services__modal-content {
+    width: 600px;
   }
 
   .portfolio__content {
