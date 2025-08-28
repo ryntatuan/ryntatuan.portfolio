@@ -109,27 +109,41 @@ let swiper = new Swiper(".portfolio__container", {
 
 /*==================== PORFOLIO MODAL ====================*/
 
-const porfolioModalViews = document.querySelectorAll(".porfolio__modal"),
+const // porfolioModalViews = document.querySelectorAll(".porfolio__modal"),
   porfolioModalBtns = document.querySelectorAll(".porfolio__button"),
   porfolioModalCloses = document.querySelectorAll(".porfolio__modal-close");
 
-let porfolioModal = function (porfolioModalClick) {
-  porfolioModalViews[porfolioModalClick].classList.add("active-porfolio-modal");
-};
+// let porfolioModal = function (porfolioModalClick) {
+//   porfolioModalViews[porfolioModalClick].classList.add("active-porfolio-modal");
+// };
 
 porfolioModalBtns.forEach((porfolioModalBtn, i) => {
   porfolioModalBtn.addEventListener("click", () => {
-    porfolioModal(i);
+    const targetModalId = porfolioModalBtn.getAttribute("data-target");
+    const targetModal = document.querySelector(targetModalId);
+    if (targetModal) {
+      targetModal.classList.add("active-porfolio-modal");
+    }
+    // porfolioModal(i);
   });
 });
 
 porfolioModalCloses.forEach((porfolioModalClose) => {
   porfolioModalClose.addEventListener("click", () => {
+    const porfolioModalViews = document.querySelectorAll(".porfolio__modal");
     porfolioModalViews.forEach((porfolioModalView) => {
       porfolioModalView.classList.remove("active-porfolio-modal");
     });
   });
 });
+
+// porfolioModalCloses.forEach((porfolioModalClose) => {
+//   porfolioModalClose.addEventListener("click", () => {
+//     porfolioModalViews.forEach((porfolioModalView) => {
+//       porfolioModalView.classList.remove("active-porfolio-modal");
+//     });
+//   });
+// });
 
 /*==================== TESTIMONIAL ====================*/
 
