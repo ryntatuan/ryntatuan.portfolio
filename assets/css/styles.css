@@ -646,6 +646,7 @@ img {
 .services_image-container {
   display: flex;
   justify-content: center;
+  padding-bottom: 1rem;
 }
 
 .services_text-container {
@@ -1079,7 +1080,6 @@ img {
 
   .services__icon-sfg {
     height: 3rem;
-    aspect-ratio: 3.25/1;
   }
 
   .services__modal {
@@ -1253,19 +1253,19 @@ img {
     width: 450px;
   }
 
-  .services__icon-fpt {
-    height: 5rem;
+  /* .services__icon-fpt {
+    height: 3rem;
     aspect-ratio: 2.46/1;
   }
 
   .services__icon-citek {
-    height: 5rem;
+    height: 3rem;
     aspect-ratio: 2/1;
-  }
-
+  } */
+  .services__icon-fpt,
+  .services__icon-citek,
   .services__icon-sfg {
-    height: 5rem;
-    aspect-ratio: 3.25/1;
+    height: 3.5rem;
   }
 
   .portfolio__img {
