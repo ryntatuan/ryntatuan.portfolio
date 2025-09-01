@@ -90,6 +90,15 @@ modalCloses.forEach((modalClose) => {
   });
 });
 
+// Đóng Modal khi click ra ngoài
+modalViews.forEach((serviceModalView) => {
+  serviceModalView.addEventListener("click", (e) => {
+    if (e.target === serviceModalView) {
+      serviceModalView.classList.remove("active-modal");
+    }
+  });
+});
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
   cssMode: true,
@@ -111,11 +120,8 @@ let swiper = new Swiper(".portfolio__container", {
 
 const // porfolioModalViews = document.querySelectorAll(".porfolio__modal"),
   porfolioModalBtns = document.querySelectorAll(".porfolio__button"),
-  porfolioModalCloses = document.querySelectorAll(".porfolio__modal-close");
-
-// let porfolioModal = function (porfolioModalClick) {
-//   porfolioModalViews[porfolioModalClick].classList.add("active-porfolio-modal");
-// };
+  porfolioModalCloses = document.querySelectorAll(".porfolio__modal-close"),
+  porfolioModalViews = document.querySelectorAll(".porfolio__modal");
 
 porfolioModalBtns.forEach((porfolioModalBtn, i) => {
   porfolioModalBtn.addEventListener("click", () => {
@@ -130,10 +136,19 @@ porfolioModalBtns.forEach((porfolioModalBtn, i) => {
 
 porfolioModalCloses.forEach((porfolioModalClose) => {
   porfolioModalClose.addEventListener("click", () => {
-    const porfolioModalViews = document.querySelectorAll(".porfolio__modal");
     porfolioModalViews.forEach((porfolioModalView) => {
       porfolioModalView.classList.remove("active-porfolio-modal");
     });
+  });
+});
+
+// Đóng Modal khi click ra ngoài
+porfolioModalViews.forEach((porfolioModalView) => {
+  porfolioModalView.addEventListener("click", (e) => {
+    // Kiểm tra xem click có phải vào phần nội dung modal không
+    if (e.target === porfolioModalView) {
+      porfolioModalView.classList.remove("active-porfolio-modal");
+    }
   });
 });
 
